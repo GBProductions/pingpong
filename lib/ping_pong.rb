@@ -10,12 +10,15 @@ end
 
 
   def match_and_replace_numbers(array)
-    replaced_array = []
-    array.each do |array_element|
-      element_as_integer = array.element.to_i
-      if  element_as_integer.include? "3"
-      replaced_array.push "Ping"
-      elsif element_as_integer.include? "5"
-      replaced_array.push "Pong"
-    end
+    replaced_array = array
+    replaced_array.each do |array_element|
+      element_as_string = array_element.to_s
+      if  element_as_string.include? '3'
+        replaced_array.map! {|element| element.method}
+      elsif element_as_string.include? '5'
+        replaced_array.map!
+      return replaced_array
+      end
   end
+end
+

@@ -9,6 +9,6 @@ end
 
 describe ('match_and_replace_numbers') do
   it("replaces 3 with ping") do
-   expect(match_and_replace_numbers(3)).to(eq(["1","2","Ping"]))
+   expect(match_and_replace_numbers(counts_up(3))).to(eq(['1','2',"Ping"]))
  end
 end
